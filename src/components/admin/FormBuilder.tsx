@@ -205,7 +205,7 @@ export function FormBuilder({ initialSchema }: Props) {
     <div className="space-y-6">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div className="max-w-2xl space-y-2">
-          <h1 className="text-2xl font-semibold text-[var(--text-primary)]">Form builder</h1>
+          <h1 className="text-2xl font-semibold text-[var(--text-primary)]">Edit questionnaires</h1>
           <p className="text-sm text-secondary">
             You are editing a <strong>questionnaire version</strong>, not the master template library. Remove sections
             freely — add them back anytime from the template dropdown below.

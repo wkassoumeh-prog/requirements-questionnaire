@@ -11,8 +11,8 @@ export default async function ProjectsPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-semibold text-[var(--text-primary)]">Client projects</h1>
-        <p className="text-secondary">Create a private questionnaire link for each client.</p>
+        <h1 className="text-2xl font-semibold text-[var(--text-primary)]">Create a questionnaire link</h1>
+        <p className="text-secondary">Each link is private to one client. Share it when the questionnaire is ready.</p>
       </div>
 
       <CreateProjectForm />

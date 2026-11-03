@@ -14,7 +14,7 @@ export default async function AdminOverviewPage() {
     <div className="space-y-6">
       <div>
         <h1 className="text-2xl font-semibold text-[var(--text-primary)]">Overview</h1>
-        <p className="text-secondary">Manage client questionnaires and export website specifications.</p>
+        <p className="text-secondary">Questionnaire links, drafts, and submitted specifications.</p>
       </div>
 
       <div className="grid gap-4 sm:grid-cols-3">
@@ -43,10 +43,10 @@ export default async function AdminOverviewPage() {
 
       <div className="flex flex-wrap gap-3">
         <Button asChild>
-          <Link href="/admin/projects">Create client project</Link>
+          <Link href="/admin/projects">Create a questionnaire link</Link>
         </Button>
         <Button asChild variant="outline">
-          <Link href="/admin/form-builder">Edit questionnaire</Link>
+          <Link href="/admin/form-builder">Edit questionnaires</Link>
         </Button>
       </div>
     </div>

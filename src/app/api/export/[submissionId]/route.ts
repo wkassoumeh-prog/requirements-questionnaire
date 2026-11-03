@@ -1,18 +1,11 @@
 import { NextResponse } from "next/server";
 import { generateBrief } from "@/lib/brief/generate-brief";
-import { requireAdminUser } from "@/lib/auth/admin";
 import { getSubmissionById } from "@/lib/db/repository";
 
 export async function GET(
   request: Request,
   context: { params: Promise<{ submissionId: string }> },
 ) {
-  try {
-    await requireAdminUser();
-  } catch {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-  }
-
   const { submissionId } = await context.params;
   const format = new URL(request.url).searchParams.get("format") ?? "md";
 

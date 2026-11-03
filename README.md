@@ -5,21 +5,20 @@ Next.js application for collecting client website requirements and exporting imp
 ## Stack
 
 - Next.js 16 (App Router), React, TypeScript, Tailwind CSS
-- Supabase (PostgreSQL, Auth, Storage)
+- Supabase (PostgreSQL, Storage), optional. Without keys, data stays in `.data/store.json`.
 
 ## Setup
 
-1. Copy `.env.example` to `.env.local` and fill in Supabase credentials.
-2. Run the SQL migration in `supabase/migrations/001_initial.sql` in your Supabase project (SQL editor).
-3. Create an admin user in Supabase Auth (email/password).
-4. Install and run:
+1. Copy `.env.example` to `.env.local` only if you want Supabase. Leave it empty to use the local store.
+2. If you use Supabase, run the SQL migration in `supabase/migrations/001_initial.sql` in the SQL editor.
+3. Install and run:
 
 ```bash
 npm install
 npm run dev
 ```
 
-5. Sign in at `/admin/login`, create a client project, and share the `/q/{token}` link.
+4. Open the home page. Edit questionnaires, or create a questionnaire link and share `/q/{token}`. There is no login.
 
 ## Scripts
 
