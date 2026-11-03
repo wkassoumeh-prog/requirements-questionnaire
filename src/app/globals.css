@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+/* Light, high-contrast theme only — avoids inherited body color on white surfaces. */
+:root {
+  color-scheme: light;
+  --background: #eef2f7;
+  --foreground: #0c1222;
+  --surface: #eef2f7;
+  --surface-elevated: #ffffff;
+  --text-primary: #0c1222;
+  --text-secondary: #334155;
+  --text-muted: #475569;
+  --border: #94a3b8;
+  --border-subtle: #cbd5e1;
+  --brand: #3730a3;
+  --brand-hover: #312e81;
+  --brand-muted: #e0e7ff;
+  --focus-ring: #4338ca;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-dm-sans);
+  --font-display: var(--font-fraunces);
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  background: var(--surface);
+  color: var(--text-primary);
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-fraunces), Georgia, serif;
+}
+
+/* Surfaces that must stay readable regardless of parent */
+.surface-page {
+  background: var(--surface);
+  color: var(--text-primary);
+}
+
+.surface-card {
+  background: var(--surface-elevated);
+  color: var(--text-primary);
+  border-color: var(--border-subtle);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-brand {
+  color: var(--brand);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
